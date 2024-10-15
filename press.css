@@ -1,0 +1,235 @@
+/* BURGER MENU I DESKTOP*/
+header {
+  padding: 20px;
+}
+
+.logo img {
+  width: 37%;
+  height: auto;
+}
+
+nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.menu {
+  display: flex;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  justify-content: space-between;
+  position: absolute;
+  left: 61%;
+}
+
+.menu li:last-child {
+  margin-right: 0;
+}
+
+.menu a {
+  display: flex;
+  padding: 10px;
+  color: #000d3f;
+  text-decoration: none;
+  transition: color 0.3s;
+  text-align: end;
+}
+
+.burger {
+  width: 30px;
+  height: 20px;
+  cursor: pointer;
+}
+
+.burger .line {
+  width: 100%;
+  height: 2px;
+  background-color: #000d3f;
+  margin-bottom: 5px;
+  transition: 0.2s linear;
+}
+.burger {
+  display: none;
+}
+
+
+/* MENU I MOBILEVIEW */
+@media screen and (max-width: 800px) {
+
+  .menu,
+  .min_profil {
+    display: none;
+  }
+  .burger {
+    display: block;
+  }
+  .burger.active .line:nth-child(1) {
+    transform: rotate(45deg) translate(5px, 5px);
+    transition: 0.2s linear;
+  }
+
+  .burger.active .line:nth-child(2) {
+    opacity: 0;
+    transition: 0.15s linear;
+  }
+
+  .burger.active .line:nth-child(3) {
+    transform: rotate(-45deg) translate(5px, -5px);
+    transition: 0.2s linear;
+  }
+
+  nav.active .menu {
+    display: block;
+    background-color: #e4dddd;
+    position: absolute;
+    top: 161px;
+    right: 65px;
+    z-index: 1;
+  }
+
+  nav.active .menu li {
+    margin: 10px 20px;
+  }
+
+  nav.active .menu a {
+    font-size: 20px;
+  }
+
+  li {
+    width: 100%;
+  }
+}
+
+/* SIDEN I MOBILE VIEW */
+body {
+  background-color: #f9f2f2;
+}
+
+.p_press {
+  font-style: italic;
+  margin: 20px;
+}
+
+p {
+  margin: 20px;
+}
+
+.center_img {
+  margin: 0 auto;
+}
+
+.img1,
+.order {
+  position: relative;
+  left: 15%;
+  margin: 20px 0px;
+}
+
+img {
+  width: 70%;
+  display: grid;
+  position: relative;
+}
+
+.container2_1_1 {
+  margin-top: 50px;
+}
+
+/* fade in and out img */
+#popImage3,
+#popImage4 {
+  opacity: 0; /* gør at billede starter usynligt */
+  transition: opacity 0.5s ease-in-out, transform 0.5s ease-in-out;
+}
+
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+.pop-animation {
+  animation: fadeIn 0.5s ease-in-out; 
+}
+
+
+.link {
+  text-decoration: none; /* fjerner underline */
+  color: #000691; 
+}
+
+.link:visited {
+  color: #000691; 
+}
+
+
+.link:hover {
+  color: #000691; 
+}
+
+
+.link:active,
+.link:focus {
+  color: #000691; 
+}
+
+
+
+
+
+/* SIDEN I COMPUTER VIEW */
+@media (min-width: 800px) {
+  /* CONTAINER 1 */
+  .container_1_1 {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr;
+    gap: 20px;
+  }
+
+  .img1 {
+    grid-column: 2 / span 1; 
+  }
+
+  .sammen2{
+    text-align: right;
+  }
+
+  .tekst_cont_1{
+    grid-column: 1 / span 1; 
+    display: grid;
+    grid-template-rows: 1fr 1fr 1fr; 
+       gap: 18%;
+    margin: 10% 0;
+  }
+
+  /* CONTAINER 2 */
+  .container2_1_1 {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr;
+    gap: 20px;
+  }
+
+  .order {
+    grid-column: 1 / span 1; 
+  }
+
+  .tekst_cont_2 {
+    grid-column: 2 / span 1; 
+    display: grid;
+    grid-template-rows: 1fr 1fr 1fr; 
+    gap: 30%;
+    margin: 10% 0;
+    
+  }
+
+  .sammen4{
+    text-align: right;
+  }
+}

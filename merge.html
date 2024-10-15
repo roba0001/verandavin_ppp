@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="da">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="mutual_styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <link rel="stylesheet" href="merge.css">
+
+ 
+    <title>Merch</title>
+    <style>
+        @font-face {
+            font-family: 'VerandaFont';
+            src: url('Apoc-BoldItalic.woff') format('woff');
+            src: url('Apoc-BoldItalic.woff2') format('woff2');
+            font-weight: normal;
+            font-style: normal;
+        }
+
+        body {
+            margin: 1cm;
+            border: 2px solid #283274;
+            box-sizing: border-box;
+            background-color: #f9f2f2;
+        }
+
+        header img {
+            width: 200px;
+            height: auto;
+        }
+
+        section {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            padding: 20px;
+        }
+
+        .merch-item1 {
+            flex: 0 0 calc(33.33% - 20px);
+            margin: 10px;
+            cursor: auto;
+
+            transition: transform 2s ease;
+        }
+
+        .merch-item1 img {
+            width: 100%;
+            height: 100%;
+            transition: transform 2s ease;
+        }
+
+        .merch-item2 {
+            flex: 0 0 calc(33.33% - 20px);
+            margin: 10px;
+            transition: transform 2s ease;
+        }
+
+        .merch-item2 img {
+            width: 100%;
+            height: 100%;
+            transition: transform 2s ease;
+        }
+
+        .merch-item3 {
+            flex: 0 0 calc(33.33% - 20px);
+            margin: 10px;
+            transition: transform 2s ease;
+        }
+
+        .merch-item3 img {
+            width: 100%;
+            height: 100%;
+            transition: transform 2s ease;
+        }
+
+
+        .merch-item1:hover img {
+            transform: scale(1.2);
+            content: url(merchphotos/tshirt2.webp);
+        }
+
+        .merch-item3:hover img {
+            transform: scale(1.2);
+            content: url(merchphotos/lighter2.webp);
+        }
+
+        .merch-item2:hover img {
+            transform: scale(1.2);
+
+            content: url(merchphotos/totebag2.webp);
+        }
+
+
+
+        @media (max-width: 768px) {
+            section {
+                flex-direction: column;
+            }
+
+            .merch-item {
+                flex: 0 0 100%;
+            }
+
+            header p {
+                margin: 10px;
+            }
+        }
+    </style>
+
+</head>
+
+<body>
+    <nav>
+        <div class="logo">
+            <a href="index.html">
+                <img src="img/logo_blue.webp" alt="Logo" />
+            </a>
+        </div>
+
+        <ul class="menu">
+            <li><a href="about_us.html">About us</a></li>
+            <li><a href="events.html">Events</a></li>
+            <li><a href="giftcard.html">Giftcard</a></li>
+            <li><a href="merge.html">Merch</a></li>
+            <li><a href="press.html">Press</a></li>
+        </ul>
+
+        <div class="burger">
+            <div class="line"></div>
+            <div class="line"></div>
+            <div class="line"></div>
+        </div>
+    </nav>
+
+    <header>
+        <h1>Merch</h1>
+        <p>At Veranda, we offer a curated selection of limited-edition merchandise that reflects the style and
+            quality we appreciate. Our merchandise is available in limited quantities, chosen with care to align with
+            our
+            own
+            preferences. It's your chance to take a piece of Veranda home with you.
+            Drop by and explore our collection – you might just find the perfect item that suits your taste and adds a
+            touch of Veranda to your daily life.</p>
+    </header>
+
+    <section>
+        <div class="merch-item1">
+            <img src="merchphotos/tshirt1.webp" alt="Merchandise 1">
+        </div>
+
+        <div class="merch-item3">
+            <img src="merchphotos/lighter1.webp" alt="Merchandise 3">
+        </div>
+        <div class="merch-item2">
+            <img src="merchphotos/totebag1.webp" alt="Merchandise 2">
+        </div>
+    </section>
+    <footer>
+        <div class="social-icons">
+            <a href="https://www.instagram.com/verandavin/" target="_blank"><i class="fab fa-instagram"></i></a>
+            <a href="mailto:info@verandavin.dk" class="newsletter-icon"><i class="far fa-envelope"></i></a>
+        </div>
+        <div class="tekst_footer">
+            All Right Reserved @Veranda Vin Aps - Griffenfeldsgade 17, 2200 København.
+        </div>
+        <div class="tekst_footer2">
+            <a href="https://www.findsmiley.dk/757360">Smiley</a>
+        </div>
+    </footer>
+
+    <script src="menu.js"></script>
+
+</body>
+
+
+</html>

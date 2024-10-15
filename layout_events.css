@@ -1,0 +1,215 @@
+@font-face {
+  font-family: "VerandaFont";
+  src: url("fonts/Apoc-BoldItalic.woff") format("woff");
+  src: url("fonts/Apoc-BoldItalic.woff2") format("woff2");
+}
+
+.overlappende_billeder {
+  position: relative;
+}
+
+.overlappende_billeder img {
+  max-width: 60%;
+  margin-left: 2rem;
+}
+
+.overlappende_billeder img:first-child {
+  position: relative;
+  z-index: 1; /* gør at dette billede er øverst */
+}
+
+.overlappende_billeder img:last-child {
+  position: absolute;
+  right: 5px;
+  z-index: 3; /* Sørger for at billedet er øverst */
+  transform: scale(0.8);
+  padding-bottom: 80rem;
+  padding-left: 20rem;
+}
+
+.instagram {
+  text-align: center;
+}
+
+.instagram img {
+  max-width: 100%;
+}
+
+.tekst1 {
+  text-align: center;
+  padding-bottom: 2rem;
+  font-family: "p";
+}
+
+.tekst2 {
+  margin: 20px;
+  padding-top: 7rem;
+  font-family: "p";
+}
+
+.tekst3 {
+  margin: 20px;
+  padding-top: 1rem;
+  font-family: "p";
+}
+
+.tekst4 {
+  margin: 20px;
+  font-family: "p";
+}
+
+.billede_container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0;
+}
+
+.billede_grid {
+  gap: 2rem;
+  max-width: 80%;
+  align-items: center;
+}
+
+.billede_grid img {
+  max-width: 100%;
+  height: auto;
+}
+
+/* insta plugin 
+
+.instagram-feed {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  padding: 6px;
+}
+
+.instagram-post {
+  width: 300px;
+  margin: 20px;
+  background-color: #fff;
+  border: 1px solid #e1e1e1;
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.instagram-post img {
+  width: 100%;
+  height: auto;
+  border-bottom: 1px solid #e1e1e1;
+}
+
+.instagram-post .caption {
+  padding: 15px;
+}
+
+.instagram-post .caption p {
+  margin: 0;
+  font-size: 14px;
+  color: #333;
+}
+
+.instagram-post .timestamp {
+  padding: 15px;
+  border-top: 1px solid #e1e1e1;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.instagram-post .timestamp span {
+  font-size: 12px;
+  color: #888;
+}
+*/
+
+#popImage,
+#popImage2 {
+  transition: opacity 0.2s ease-in-out, transform 0.2s ease-in-out;
+}
+
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+.pop-animation {
+  animation: fadeIn 0.5s ease-in-out; /* får billedet til at fade ind */
+}
+
+/* SIDEN I COMPUTER VIEW */
+@media (min-width: 800px) {
+  .overlappende_billeder img {
+    max-width: 45%;
+    margin: 0 0 30px 30px; /* gør at der er lige stor margin på toppen, bunden, højre og venstre */
+  }
+
+  .overlappende_billeder img:first-child {
+    position: relative;
+    z-index: 1;
+  }
+
+  .overlappende_billeder img:last-child {
+    position: absolute;
+    right: 243px;
+    top: 213px;
+    z-index: 3;
+    transform: scale(0.9);
+  }
+
+  .tekst1 {
+    font-size: larger;
+  }
+
+  .tekst2 {
+    font-family: "p";
+    position: absolute;
+    top: 460px;
+    left: 829px;
+    font-size: 17px;
+    right: 100px;
+  }
+
+  .tekst3 {
+    text-align: center;
+    font-size: larger;
+    padding-bottom: 1rem;
+    padding-top: 17rem;
+  }
+
+  .billede_container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+  }
+
+  .billede_grid {
+    display: flex;
+    gap: 2rem;
+    max-width: 80%;
+    align-items: center;
+  }
+
+  .billede_grid div {
+    flex: 1;
+  }
+
+  .billede_grid img {
+    max-width: 100%;
+    height: auto;
+  }
+  .tekst4 {
+    font-size: larger;
+    text-align: center;
+    padding-bottom: 1rem;
+  }
+}

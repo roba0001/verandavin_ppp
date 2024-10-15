@@ -1,0 +1,135 @@
+/* Font Face */
+@font-face {
+  font-family: "VerandaFont";
+  src: url("fonts/Apoc-BoldItalic.woff") format("woff");
+  src: url("fonts/Apoc-BoldItalic.woff2") format("woff2");
+}
+
+.pop-animation {
+  animation: fadeIn 0.5s ease-in-out;
+}
+
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+.overlappende_billeder {
+  position: relative;
+}
+
+.overlappende_billeder img {
+  max-width: 60%;
+  margin-left: 2rem;
+}
+
+.overlappende_billeder img:first-child {
+  position: relative;
+  z-index: 1;
+}
+
+.overlappende_billeder img:last-child {
+  position: absolute;
+
+  right: -70px;
+  z-index: 3;
+  transform: scale(0.8);
+  padding-bottom: 75rem;
+  padding-left: 20rem;
+}
+
+.billede {
+  position: relative;
+  margin-left: 2rem;
+}
+
+.billede img {
+  max-width: 70%;
+}
+
+.overlappende_billeder2 .billede3 {
+  height: 100%;
+}
+
+.overlappende_billeder2 {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 10px;
+}
+
+.overlappende_billeder2 img {
+  width: 100%;
+  height: auto;
+  opacity: 0;
+  transition: opacity 1s ease-in-out;
+}
+
+.tekst1 {
+  text-align: center;
+  padding: 4rem;
+  font-family: "p";
+  box-sizing: border-box;
+}
+
+.tekst2 {
+  margin: 20px;
+  padding-top: 3rem;
+  font-family: "p";
+  padding-bottom: 1rem;
+  font-size: larger;
+  grid-column: span 2;
+  text-align: center;
+}
+
+p {
+  margin: 20px;
+  padding-top: 1rem;
+  font-size: larger;
+  padding-bottom: 1rem;
+}
+
+.text4 {
+  background-color: #d2dedc;
+}
+
+.text5 {
+  text-align: center;
+}
+
+#popImage,
+#popImage2 {
+  opacity: 0;
+  transition: opacity 0.5s ease-in-out, transform 0.5s ease-in-out;
+}
+
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+.pop-animation {
+  animation: fadeIn 0.5s ease-in-out;
+}
+
+.video-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex: 1 0 33.33%;
+  position: relative;
+}
+
+.video-container iframe {
+  top: 0;
+  left: 0;
+  width: 600px;
+  aspect-ratio: 1/1;
+}
